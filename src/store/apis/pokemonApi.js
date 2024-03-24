@@ -7,10 +7,18 @@ const pokemonApi = createApi({
   }),
   endpoints(builder) {
     return {
-      fetchPokemon: builder.query({
+      fetchPokemonName: builder.query({
         query: (name) => {
           return {
             url: `pokemon/${name}`,
+            method: 'GET',
+          };
+        },
+      }),
+      fetchPokemonId: builder.query({
+        query: (id) => {
+          return {
+            url: `pokemon/${id}`,
             method: 'GET',
           };
         },
@@ -19,5 +27,5 @@ const pokemonApi = createApi({
   },
 });
 
-export const { useFetchPokemonQuery } = pokemonApi;
+export const { useFetchPokemonNameQuery, useFetchPokemonIdQuery } = pokemonApi;
 export { pokemonApi };
