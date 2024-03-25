@@ -1,6 +1,77 @@
-.poke {
+.navbar {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    background-color: #1f2020;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 0;
+    margin-bottom: 0;
+    min-height: 50px;
 }
+
+a {
+    font-size: large;
+    color: #797979;
+    text-decoration: none;
+    padding: 15px;
+    margin: 5px;
+
+}
+a:hover {
+    color: #fff;
+    background-color: #5a5a5a;
+}
+
+.search{
+    display: flex;
+    justify-content: right;
+    margin-right: 100px;
+    margin-top: 20px;
+
+}
+
+.searchForm {
+    width: 500px;
+    height: 40px;
+    background: #444;
+    background: rgba(0,0,0,.2);
+    border-radius:  3px;
+    border: 1px solid #fff;
+    
+    input {
+      width: 370px;
+      padding: 10px 5px;
+      float: left;
+      color: #ccc;
+      border: 0;
+        background: transparent;
+      border-radius: 3px 0 0 3px;
+      &:focus {
+        outline: 0;
+        background:transparent;
+      }
+    }
+    
+    button {
+      position: relative;
+      float: right;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      height: 40px;
+      width: 120px;
+      color: #fff;
+      background: transparent;
+      border-left: 1px solid #fff;
+      border-radius: 0 3px 3px 0;
+      &:hover {
+        background: #fff;
+        color:#444;
+      }
+      &:active {
+        box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+      }
+      &:focus {
+        outline: 0;
+      }
+    }  
+  }
